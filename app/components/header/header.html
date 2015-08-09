@@ -1,7 +1,15 @@
-<nav>
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-  </ul>
-</nav>
+<header class="mdl-layout__header">
+  <div class="mdl-layout__header-row">
+    <!-- Title -->
+    <span class="mdl-layout-title">Ping Social</span>
+    <!-- Add spacer, to align navigation to the right -->
+    <div class="mdl-layout-spacer"></div>
+    <!-- Navigation. We hide it in small screens. -->
+    <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link" href="support">Support</a>
+      <a class="mdl-navigation__link" href="http://ping-social.com">Visit ping-social.com</a>
+      <a class="mdl-navigation__link" href="#" ng-hide="signedIn" ng-click="logIn()">Login</a>
+      <a class="mdl-navigation__link" href="#" ng-show="signedIn" ng-click="logOut()">Logout</a>
+    </nav>
+  </div>
+</header>
