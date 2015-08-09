@@ -15,6 +15,8 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+  <app-header></app-header>
+
   <ul class="menu">
     <li><a href="#/dashboard">dashboard</a></li>
     <li><a href="#/ping">ping</a></li>
@@ -25,7 +27,7 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
+      
   <div ng-view></div>
 
   <div>Angular seed app: v<span app-version></span></div>
@@ -40,6 +42,7 @@
   <script src="ping/ping.js"></script>
   <script src="payment/payment.js"></script>
   <script src="merchant/merchant.js"></script>
+  <script src="components/header/header-directive.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

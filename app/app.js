@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.dashboard',
+  'myApp.header',
   'myApp.merchant',
   'myApp.payment',
   'myApp.ping',
