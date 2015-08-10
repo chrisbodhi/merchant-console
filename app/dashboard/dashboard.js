@@ -9,6 +9,6 @@ angular.module('myApp.dashboard', ['ngRoute'])
   });
 }])
 
-.controller('DashboardController', [function() {
-
+.controller('DashboardController', ['$scope', function($scope) {
+//   $scope.check = 'checked out';
 }]);
