@@ -9,6 +9,6 @@ angular.module('myApp.payment', ['ngRoute'])
   });
 }])
 
-.controller('PaymentController', [function() {
-
+.controller('PaymentController', ['$scope', function($scope) {
+  $scope.months = ['Jan', 'Feb', 'Mar', 'Apr'];
 }]);

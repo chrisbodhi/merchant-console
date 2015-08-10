@@ -1,1 +1,45 @@
-<p>This is the partial for view 1.</p>
+<form novalidate name="paymentForm" style="width:30%;margin:0 auto;">
+  <div class="mdl-textfield mdl-js-textfield textfield-demo">
+    <input class="mdl-textfield__input" type="text" id="sample1" />
+    <label class="mdl-textfield__label" for="sample1">Cardholder Name</label>
+  </div>
+  <br />
+  <div class="mdl-textfield mdl-js-textfield textfield-demo">
+    <input
+      class="mdl-textfield__input"
+      type="text"
+      name="creditCard"
+      ng-model="ccinfo.number"
+      required
+      data-credit-card-type
+      data-ng-pattern="/^[0-9]+$/"
+      data-ng-minlength="15"
+      maxlength="19"
+      placeholder="Card Number" >{{ccinfo.type}}
+  </div>
+  <br />
+    <div class="mdl-textfield mdl-js-textfield textfield-demo">
+    <input
+      class="mdl-textfield__input"
+      type="text"
+      name="securityCode"
+      ng-model="ccinfo.securityCode"
+      placeholder="CCV"
+      required
+      data-ng-pattern="/^[0-9]+$/"
+      data-ng-minlength="3"
+      maxlength="4">
+    </div>   
+    <br />
+    <select name="month" data-card-expiration required>
+      <option disabled selected value="">Month</option>
+      <option ng-repeat="month in months" value="{{$index+1}}" > {{$index+1}} - {{month}}</li>
+    </select>
+    <select ng-model="ccinfo.year" name="year" required>
+      <option disabled selected value="">Year</option>
+      <option ng-repeat="year in [] | range:currentYear:currentYear+13">{{year}}</li>
+    </select>
+    <br/>
+    <br/>
+    <button type="submit">Submit</button>
+</form>
